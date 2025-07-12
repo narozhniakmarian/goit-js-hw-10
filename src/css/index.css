@@ -1,0 +1,44 @@
+ul {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.li-timer,
+.li-promise {
+  margin-top: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.lobbi-btn {
+  position: relative;
+  z-index: 999;
+  display: block;
+  padding: 6px 20px;
+  background-color: rgba(98, 35, 99, 0.536);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+}
+
+.lobbi-btn:hover {
+  background-color: rgba(98, 35, 99, 0.877);
+}
+
+.li-timer.animate::before,
+.li-promise.animate::before {
+  opacity: 0.3;
+}

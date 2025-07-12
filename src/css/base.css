@@ -27,6 +27,106 @@ body {
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
+}
+
+.back {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  margin: 12px;
+}
+
+.back::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 10px solid black;
+}
+
+.timer {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.value {
+  font-size: 38px;
+  /* font-weight: bold; */
+  color: #333;
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="number"] {
+  height: 32px;
+}
+
+
+fieldset {
+  /* text-indent: 12px; */
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  padding: 8px;
+}
+
+fieldset label {
+  display: flex;
+  flex-direction: row;
+
+  gap: 8px;
+}
+
+
+#spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid lightgray;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
